@@ -1,4 +1,6 @@
 
+def getInput():
+    print('Please enter a number:')
 def welcome():
     dashes = '------------------------'
     equals = '========================'
@@ -6,11 +8,11 @@ def welcome():
     print(equals)
     print('Welcome to the OS Filesystem Simulation.')
     print('Your options are:')
-    print('1. Create a directory.')
-    print('2. Create a file.')
-    print('3. Delete a file.')
-    print('4. Delete a directory.')
-    print('5. Show the current directory.')
+    print()
+    print('1. Create a file.')
+    print('2. Delete a file.')
+    print('3. Show all files.')
+    print()
     print(equals)
     print(dashes)
 
@@ -21,4 +23,5 @@ def del_file(args):
 
 if __name__ == "main":
     welcome()
+    choice = getInput()
 
