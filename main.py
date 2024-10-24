@@ -1,23 +1,26 @@
 
 root = []
-def getInput():
-    prompt = 'Please enter a number: '
+def get_input():
+    prompt = 'Please enter a number 1-5 (0 for help): '
+    
+    try:
+        base_choice = int(input(prompt))
+    except ValueError:
+        print('Invalid input. Please enter a number.')
+        return None
 
-    baseChoice = int(input(prompt))
-    if baseChoice == 1:
-        return baseChoice
-    elif baseChoice == 2:
-        return baseChoice
-    elif baseChoice == 3:
-        return baseChoice
-    elif baseChoice == 0:
+    if base_choice in [1, 2, 3, 4, 5]:
+        return base_choice
+    elif base_choice == 0:
         print("Here is a list of commands:")
         print('1. Create a file.')
-        print('2. Delete a file.')
-        print('3. Show all files.')
+        print('2. Read a file.')
+        print('3. Write to a file.')
+        print('4. Delete a file.')
+        print('5. Show all files.')
     else:
-        print()
         print('Invalid selection. If you need a list of commands, enter 0.')
+        return None
 
 
 
