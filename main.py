@@ -40,35 +40,6 @@ def get_input():
         return None
 
 
-
-def welcome():
-    dashes = '------------------------'
-    equals = '========================'
-    print(dashes)
-    print(equals)
-    print('Welcome to the OS Filesystem Simulation.')
-    print('Your options are:')
-    print()
-    print('1. Create a file.')
-    print('2. Delete a file.')
-    print('3. Show all files.')
-    print()
-    print(equals)
-    print(dashes)
-
-
-def del_file():
-    None
-
-def mk_file():
-    global root
-    filename = input('Please enter the name of the file: ')
-    full_name = filename + '.txt'
-
-
-def show_files():
-    None
-
 def main():
     fs = FileSystem()
 
@@ -79,7 +50,9 @@ while True:
     elif choice == 2:
 
     elif choice == 3:
-
+        filename = input("Enter the file name to write to: ")
+        content = input("Enter the content: ")
+        fs.write_file(filename, content)
     elif choice == 4:
 
     elif choice == 5:
