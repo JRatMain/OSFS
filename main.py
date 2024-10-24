@@ -9,8 +9,8 @@ class FileSystem:
 
 
 
-def write_file(self, name, content)
-     file = self.find_file(name)
+    def write_file(self, name, content)
+        file = self.find_file(name)
         if file:
             file.content = content
             print(f'Content written to "{file.name}".')
