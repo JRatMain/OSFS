@@ -1,5 +1,15 @@
+class File:
+    def __init__(self, name):
+        self.name = name
+        self.content = ""
 
-root = []
+class FileSystem:
+    def __init__(self):
+        self.root = []
+
+
+
+
 def get_input():
     prompt = 'Please enter a number 1-5 (0 for help): '
     
@@ -52,17 +62,26 @@ def mk_file():
 def show_files():
     None
 
+def main():
+    fs = FileSystem()
+
+while True:
+        choice = get_input()
+    if choice == 1:
+
+    elif choice == 2:
+
+    elif choice == 3:
+
+    elif choice == 4:
+
+    elif choice == 5:
+
+    elif choice is None:
+        continue
+    else:
+        print("Exciting...")
+        break
+
 if __name__ == "__main__":
-    welcome()
-    while (True):
-        choice = getInput()
-        if choice == 1:
-            mk_file()
-        elif choice == 2:
-            del_file()
-        elif choice == 3:
-            show_files()
-        else:
-            raise Exception("Invalid choice number.")
-
-
+    main()
