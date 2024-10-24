@@ -1,6 +1,7 @@
 import File
 import FileSystem
 
+
 def write_file(self, name, content):
     file = self.find_file(name)
     if file:
@@ -9,16 +10,17 @@ def write_file(self, name, content):
     else:
         print(f'File "{name}" not found.')
 
+
 def get_input():
     prompt = 'Please enter a number 1-5 (0 for help): '
-    
+
     try:
         base_choice = int(input(prompt))
     except ValueError:
         print('Invalid input. Please enter a number.')
         return None
 
-    if base_choice in [1, 2, 3, 4, 5]:
+    if base_choice in [1, 2, 3, 4, 5, 6]:
         return base_choice
     elif base_choice == 0:
         print("Here is a list of commands:")
@@ -27,15 +29,27 @@ def get_input():
         print('3. Write to a file.')
         print('4. Delete a file.')
         print('5. Show all files.')
+        print('6. Exit.')
     else:
         print('Invalid selection. If you need a list of commands, enter 0.')
         return None
+
+
 def create_file(filename, filesys):
-    None
+    return None
+
+
+def delete_file(self, name):
+    file = self.find_file(name)
+    if file:
+        self.files.remove(file)
+        print(f'File "{name}" deleted.')
+    else:
+        print(f'File "{name}" not found.')
 
 
 def main():
-    fs = FileSystem()
+    fs = FileSystem.FileSystem()
 
     while True:
         choice = get_input()
@@ -46,20 +60,22 @@ def main():
             create_file(full_name, fs)
 
         elif choice == 2:
-            None
+            return None
         elif choice == 3:
             filename = input("Enter the file name to write to: ")
             content = input("Enter the content: ")
             fs.write_file(filename, content)
         elif choice == 4:
-            None
+            filename = input("Enter the file name to delete: ")
+            fs.delete_file(filename)
         elif choice == 5:
             None
         elif choice is None:
             continue
-        else:
-            print("Exciting...")
+        elif choice == 6:
+            print('Goodbye!')
             break
+
 
 if __name__ == "__main__":
     main()
