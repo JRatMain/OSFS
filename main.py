@@ -9,7 +9,7 @@ class FileSystem:
 
 
 
-    def write_file(self, name, content)
+    def write_file(self, name, content):
         file = self.find_file(name)
         if file:
             file.content = content
