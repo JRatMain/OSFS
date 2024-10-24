@@ -30,6 +30,8 @@ def get_input():
     else:
         print('Invalid selection. If you need a list of commands, enter 0.')
         return None
+def create_file(filename, filesys):
+    None
 
 
 def main():
@@ -38,6 +40,10 @@ def main():
     while True:
         choice = get_input()
         if choice == 1:
+            name = input("Enter a name for your file: ")
+            extension = input('What file extension is it? ')
+            full_name = name + '.' + extension
+            create_file(full_name, fs)
 
         elif choice == 2:
             None
@@ -50,7 +56,7 @@ def main():
         elif choice == 5:
             None
         elif choice is None:
-        continue
+            continue
         else:
             print("Exciting...")
             break
