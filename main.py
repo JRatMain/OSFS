@@ -1,21 +1,13 @@
-class File:
-    def __init__(self, name):
-        self.name = name
-        self.content = ""
+import File
+import FileSystem
 
-class FileSystem:
-    def __init__(self):
-        self.root = []
-
-
-
-    def write_file(self, name, content):
-        file = self.find_file(name)
-        if file:
-            file.content = content
-            print(f'Content written to "{file.name}".')
-        else:
-            print(f'File "{name}" not found.')
+def write_file(self, name, content):
+    file = self.find_file(name)
+    if file:
+        file.content = content
+        print(f'Content written to "{file.name}".')
+    else:
+        print(f'File "{name}" not found.')
 
 def get_input():
     prompt = 'Please enter a number 1-5 (0 for help): '
@@ -48,15 +40,15 @@ def main():
         if choice == 1:
 
         elif choice == 2:
-
+            None
         elif choice == 3:
             filename = input("Enter the file name to write to: ")
             content = input("Enter the content: ")
             fs.write_file(filename, content)
         elif choice == 4:
-
+            None
         elif choice == 5:
-
+            None
         elif choice is None:
         continue
         else:
