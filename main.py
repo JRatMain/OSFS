@@ -18,7 +18,7 @@ def get_input():
         print('Invalid input. Please enter a number.')
         return None
 
-    if base_choice in [1, 2, 3, 4, 5]:
+    if base_choice in [1, 2, 3, 4, 5, 6]:
         return base_choice
     elif base_choice == 0:
         print("Here is a list of commands:")
@@ -27,6 +27,7 @@ def get_input():
         print('3. Write to a file.')
         print('4. Delete a file.')
         print('5. Show all files.')
+        print('6. Exit.')
     else:
         print('Invalid selection. If you need a list of commands, enter 0.')
         return None
@@ -35,7 +36,7 @@ def create_file(filename, filesys):
 
 
 def main():
-    fs = FileSystem()
+    fs = FileSystem.FileSystem()
 
     while True:
         choice = get_input()
@@ -57,8 +58,8 @@ def main():
             None
         elif choice is None:
             continue
-        else:
-            print("Exciting...")
+        elif choice == 6:
+            print('Goodbye!')
             break
 
 if __name__ == "__main__":
