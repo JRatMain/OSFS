@@ -1,4 +1,5 @@
 
+root = []
 def getInput():
     prompt = 'Please enter a number: '
 
@@ -40,7 +41,10 @@ def del_file():
     None
 
 def mk_file():
-    None
+    global root
+    filename = input('Please enter the name of the file: ')
+    full_name = filename + '.txt'
+
 
 def show_files():
     None
@@ -49,4 +53,13 @@ if __name__ == "__main__":
     welcome()
     while (True):
         choice = getInput()
+        if choice == 1:
+            mk_file()
+        elif choice == 2:
+            del_file()
+        elif choice == 3:
+            show_files()
+        else:
+            raise Exception("Invalid choice number.")
+
 
