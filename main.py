@@ -43,25 +43,25 @@ def get_input():
 def main():
     fs = FileSystem()
 
-while True:
+    while True:
         choice = get_input()
-    if choice == 1:
+        if choice == 1:
 
-    elif choice == 2:
+        elif choice == 2:
 
-    elif choice == 3:
-        filename = input("Enter the file name to write to: ")
-        content = input("Enter the content: ")
-        fs.write_file(filename, content)
-    elif choice == 4:
+        elif choice == 3:
+            filename = input("Enter the file name to write to: ")
+            content = input("Enter the content: ")
+            fs.write_file(filename, content)
+        elif choice == 4:
 
-    elif choice == 5:
+        elif choice == 5:
 
-    elif choice is None:
+        elif choice is None:
         continue
-    else:
-        print("Exciting...")
-        break
+        else:
+            print("Exciting...")
+            break
 
 if __name__ == "__main__":
     main()
