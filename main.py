@@ -1,9 +1,7 @@
-import File
 import FileSystem
 
-
-def write_file(self, name, content):
-    file = self.find_file(name)
+def write_file(name, content):
+    file = name.find_file(name)
     if file:
         file.content = content
         print(f'Content written to "{file.name}".')
@@ -55,9 +53,9 @@ def main():
         choice = get_input()
         if choice == 1:
             name = input("Enter a name for your file: ")
-            extension = input('What file extension is it? ')
+            extension = input('What file extension is it (without a period)? ')
             full_name = name + '.' + extension
-            create_file(full_name, fs)
+            fs.create_file(full_name)
 
         elif choice == 2:
             return None
