@@ -11,3 +11,10 @@ class FileSystem:
         new_file = File.File(name)
         self.root.append(new_file)
         print(f'File {name} created successfully!')
+
+    def search_files(self, name):
+        for file in self.root:
+            if file.name == name:
+                return True
+            else:
+                return False

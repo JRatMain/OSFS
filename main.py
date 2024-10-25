@@ -49,13 +49,19 @@ def delete_file(self, name):
 # main function
 def main():
     fs = FileSystem.FileSystem()
-
     while True:
         choice = get_input()
         if choice == 1:
-            name = input("Enter a name for your file: ")
-            extension = input('What file extension is it (without a period)? ')
-            full_name = name + '.' + extension
+            while True:
+                name = input("Enter a name for your file: ")
+                extension = input('What file extension is it (without a period)? ')
+                full_name = name + '.' + extension
+                file_found = fs.search_files(full_name)
+                if file_found:
+                    print('You cannot have the same name for new files.')
+                    continue
+                else:
+                    break
             fs.create_file(full_name)
 
         elif choice == 2:
