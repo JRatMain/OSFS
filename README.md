@@ -14,7 +14,7 @@ Portions:
 
 Initialize File system- Zach 
 
-File Creation- Matthew (also created the intro and input systems and created the repo, also fixed bugs) 
+File Creation- Matthew (also created the intro and input systems and created the repo, fixed bugs, and committed some code for Zach and Brandt) 
 
 File Reading- Brandt 
 
