@@ -12,6 +12,23 @@ class FileSystem:
         self.root.append(new_file)
         print(f'File {name} created successfully!')
 
+# allows user to add content to files    
+    def write_file(name, content):
+        file = name.find_file(name)
+        if file:
+            file.content = content
+            print(f'Content written to "{file.name}".')
+        else:
+            print(f'File "{name}" not found.')
+# allows user to select a file to delete
+    def delete_file(self, name):
+        file = self.find_file(name)
+        if file:
+            self.files.remove(file)
+            print(f'File "{name}" deleted.')
+        else:
+            print(f'File "{name}" not found.')
+
 # searches for files using the file's name. when creating files, it also checks the extension.
     def search_files(self, name):
         for file in self.root:
