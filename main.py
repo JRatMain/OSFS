@@ -33,21 +33,7 @@ def get_input():
         return None
 
 
-def write_file(name, content):
-    file = name.find_file(name)
-    if file:
-        file.content = content
-        print(f'Content written to "{file.name}".')
-    else:
-        print(f'File "{name}" not found.')
 
-def delete_file(self, name):
-    file = self.find_file(name)
-    if file:
-        self.files.remove(file)
-        print(f'File "{name}" deleted.')
-    else:
-        print(f'File "{name}" not found.')
 
 # main function
 def main():
