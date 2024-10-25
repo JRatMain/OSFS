@@ -12,6 +12,7 @@ class FileSystem:
         self.root.append(new_file)
         print(f'File {name} created successfully!')
 
+# searches for files using the file's name. when creating files, it also checks the extension.
     def search_files(self, name):
         for file in self.root:
             if file.name == name:
