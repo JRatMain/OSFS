@@ -68,8 +68,7 @@ def main():
             fs.delete_file(filename)
         elif choice == 5:
             print("Files in the system:")
-            for file in fs.root:
-                print(file.name)
+            fs.display_files()
         elif choice is None:
             continue
         elif choice == 6:
