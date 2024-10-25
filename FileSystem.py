@@ -5,6 +5,7 @@ import File
 class FileSystem:
     def __init__(self):
         self.root = []
+        self.name = 'root'
 
 # creates a file using the name passed from main. Custom file extensions are allowed as well.
     def create_file(self, name):
