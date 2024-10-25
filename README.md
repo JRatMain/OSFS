@@ -2,7 +2,7 @@
 
 This program is meant to simulate a simple file system.
 
-Project information and assignments:
+# Project information and assignments:
 
 Language: Python 
 
