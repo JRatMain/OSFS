@@ -56,7 +56,9 @@ def main():
             fs.create_file(full_name)
 
         elif choice == 2:
-            return None
+            filename = input('Enter the name of the file you want to read: ')
+            fs.read_file(filename)
+
         elif choice == 3:
             filename = input("Enter the file name to write to: ")
             content = input("Enter the content: ")
