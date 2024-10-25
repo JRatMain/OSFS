@@ -38,6 +38,8 @@ def get_input():
 # main function
 def main():
     fs = FileSystem.FileSystem()
+    fs_name = fs.name
+    print(f'File system {fs_name} created.')
     while True:
         choice = get_input()
         if choice == 1:

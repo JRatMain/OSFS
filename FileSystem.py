@@ -37,3 +37,11 @@ class FileSystem:
                 return True
             else:
                 return False
+
+    def display_files(self):
+        if len(self.root) == 0:
+            print('No files were found.')
+            return
+        for file in self.root:
+            name = file.name
+            print(name)
