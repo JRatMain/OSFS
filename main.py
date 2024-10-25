@@ -1,3 +1,10 @@
+# Project: OS Filesystem simulation
+# Members: Matthew Vrbka, Kadyn Van Hill, Takunda Mutore, Zach Myers, Brandt Murphy
+# Repo link: https://github.com/JRatMain/OSFS
+# 10-21 to 10-25, 2024
+
+# importing filesystem class for creation and manipulation of a file system (using a list)
+# this is a safe way of tinkering with 'files' without risking harm to the user's machine.
 import FileSystem
 
 def write_file(name, content):
@@ -11,7 +18,6 @@ def write_file(name, content):
 
 def get_input():
     prompt = 'Please enter a number 1-5 (0 for help): '
-
     try:
         base_choice = int(input(prompt))
     except ValueError:
@@ -40,7 +46,7 @@ def delete_file(self, name):
     else:
         print(f'File "{name}" not found.')
 
-
+# main function
 def main():
     fs = FileSystem.FileSystem()
 
