@@ -32,11 +32,6 @@ def get_input():
         print('Invalid selection. If you need a list of commands, enter 0.')
         return None
 
-
-def create_file(filename, filesys):
-    return None
-
-
 def delete_file(self, name):
     file = self.find_file(name)
     if file:
