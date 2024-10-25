@@ -7,13 +7,7 @@
 # this is a safe way of tinkering with 'files' without risking harm to the user's machine.
 import FileSystem
 
-def write_file(name, content):
-    file = name.find_file(name)
-    if file:
-        file.content = content
-        print(f'Content written to "{file.name}".')
-    else:
-        print(f'File "{name}" not found.')
+
 
 
 def get_input():
@@ -37,6 +31,15 @@ def get_input():
     else:
         print('Invalid selection. If you need a list of commands, enter 0.')
         return None
+
+
+def write_file(name, content):
+    file = name.find_file(name)
+    if file:
+        file.content = content
+        print(f'Content written to "{file.name}".')
+    else:
+        print(f'File "{name}" not found.')
 
 def delete_file(self, name):
     file = self.find_file(name)
